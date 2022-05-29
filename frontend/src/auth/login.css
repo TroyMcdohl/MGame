@@ -1,0 +1,68 @@
+.login_container {
+  width: 100%;
+  height: calc(100vh - 60px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("https://th.bing.com/th/id/R.e219e5091abef41091e9fe884a7f6b35?rik=ZqdlIQP%2bBstbWA&pid=ImgRaw&r=0");
+}
+
+.login_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.login_label {
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+  align-items: center;
+}
+
+.login_input {
+  font-size: 20px;
+  margin: 5px;
+}
+
+.input_title {
+  margin: 5px;
+}
+
+.valid {
+}
+
+.invalid {
+  border-bottom: 2px solid red;
+}
+
+input {
+  background-color: gray;
+  outline: none;
+  border: none;
+  padding: 5px;
+  border-bottom: 2px solid blue;
+  color: white;
+  font-size: 15px;
+  border-radius: 5px;
+}
+
+.login_btn {
+  background-color: green;
+  border: none;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}

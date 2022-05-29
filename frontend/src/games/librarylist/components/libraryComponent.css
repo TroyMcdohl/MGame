@@ -1,0 +1,26 @@
+.library_container {
+  width: 100%;
+}
+
+.library_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.library_right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.re_btn {
+  border: none;
+  background-color: rgb(218, 37, 37);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}

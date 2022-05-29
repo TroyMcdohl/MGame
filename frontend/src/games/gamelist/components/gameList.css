@@ -1,0 +1,130 @@
+.game_container {
+  background-color: gray;
+  width: 100%;
+  height: calc(100vh - 60px);
+}
+
+.game_wrapper {
+  width: 90%;
+
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: darkgray;
+  justify-content: center;
+  align-items: center;
+}
+
+.game_filter {
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game_fil {
+  padding: 5px;
+  background-color: grey;
+
+  color: white;
+  font-size: 18px;
+}
+
+.game_fil_title {
+  margin: 10px;
+  color: white;
+}
+
+.game_fil:focus {
+  outline: none;
+}
+
+.game_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  width: 280px;
+  height: 60vh;
+  margin: 10px;
+  position: relative;
+}
+
+.game_logoes {
+  display: none;
+}
+
+.game_card:hover .game_logoes {
+  width: 75%;
+  position: absolute;
+  color: white;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.game_logo {
+  list-style-type: none;
+  padding: 10px;
+  background-color: white;
+  opacity: 0.5;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  border-radius: 50%;
+  transition: 1s ease;
+  cursor: pointer;
+}
+
+.game_logo:hover {
+  transform: scale(1.2);
+}
+
+.game_photo {
+  background-color: white;
+  height: 50vh;
+}
+
+.game_img {
+  width: 100%;
+  height: 98%;
+  border-radius: 10px;
+}
+
+.game_title {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 200px;
+}
+
+.loading_in {
+  color: white;
+  display: flex;
+  width: 95%;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  font-size: 25px;
+  animation: hide 0.7s infinite;
+}
+
+@keyframes hide {
+  0% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}

@@ -1,0 +1,166 @@
+.botbar_container {
+  height: 70vh;
+  width: 100%;
+}
+
+.botbar_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  background-color: black;
+  margin: auto;
+  border-radius: 5px;
+}
+
+.botbar_title {
+  font-weight: 200px;
+  margin: 10px;
+  color: white;
+  font-size: 30px;
+}
+
+.botbar_detail {
+  display: flex;
+
+  color: white;
+  margin: 10px;
+  height: 50vh;
+}
+
+.botbar_des {
+  width: 50%;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  font-weight: 300px;
+  display: flex;
+  flex-direction: column;
+  height: 40vh;
+}
+
+.botbar_contact {
+  color: white;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+}
+
+.botbar_ph {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid blue;
+  margin: 10px;
+  width: 35%;
+}
+
+.botbar_phlogo {
+  font-size: 25px;
+  margin-right: 5px;
+}
+
+.botbar_phno {
+  font-size: 20px;
+  margin-left: 5px;
+}
+
+.botbar_email {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid blue;
+  margin: 10px;
+  width: 35%;
+}
+
+.botbar_elogo {
+  font-size: 25px;
+  margin-right: 5px;
+}
+
+.botbar_eadd {
+  font-size: 20px;
+  margin-left: 5px;
+}
+
+.bot_logoes {
+  display: flex;
+  margin-right: 15px;
+}
+
+.bot_logo {
+  margin: 5px 20px;
+  list-style-type: none;
+}
+
+@media (max-width: 760px) {
+  .botbar_wrapper {
+    flex-wrap: wrap;
+  }
+
+  .botbar_detail {
+    flex-wrap: wrap;
+    color: white;
+    margin: 0px;
+    height: 55vh;
+  }
+
+  .botbar_des {
+    width: 90%;
+    font-size: 13px;
+    margin: 10px;
+    height: 20vh;
+    line-height: 20px;
+  }
+
+  .botbar_para {
+    width: 90%;
+  }
+
+  .botbar_contact {
+    width: 90%;
+    height: 0vh;
+  }
+
+  .botbar_ph {
+    margin: 5px;
+  }
+
+  .botbar_phlogo {
+    font-size: 20px;
+  }
+
+  .botbar_phno {
+    font-size: 15px;
+  }
+
+  .botbar_email {
+    margin: 10px;
+    width: 35%;
+  }
+
+  .botbar_elogo {
+    font-size: 20px;
+  }
+
+  .botbar_eadd {
+    font-size: 15px;
+  }
+
+  .bot_logoes {
+    width: 100%;
+  }
+
+  .bot_logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

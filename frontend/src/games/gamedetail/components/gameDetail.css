@@ -154,13 +154,18 @@
 }
 
 @media (max-width: 760px) {
+  .gamedetail_container {
+    height: 100%;
+  }
+
   .gamedetail_wrapper {
     flex-wrap: wrap;
-    height: calc(100vh - 60px);
+    height: 100%;
   }
 
   .gamedetail_left {
-    height: 40vh;
+    height: 30vh;
+    margin: 10px;
   }
 
   .detailleft_photo {
@@ -175,8 +180,7 @@
 
   .gamedetail_right {
     width: 100%;
-    margin: 5px;
-    height: 50vh;
+    margin: 35px;
   }
 
   .detailright_photo {

@@ -65,8 +65,21 @@
 }
 
 @media (max-width: 760px) {
+  .panel_container {
+    height: 60vh;
+    margin: 10px;
+  }
+
+  .panel_wrapper {
+    width: 95%;
+    height: 63vh;
+
+    display: flex;
+  }
+
   .panel_left {
     width: 100%;
+
     box-shadow: -1px 14px 5px 0px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: -1px 14px 5px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: -1px 14px 5px 0px rgba(0, 0, 0, 0.75);

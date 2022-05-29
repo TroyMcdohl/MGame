@@ -43,22 +43,17 @@
 @media (max-width: 760px) {
   .cgame_container {
     width: 100%;
-    height: calc(100vh - 60px);
-
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
+    height: 150vh;
   }
 
   .cgame_wrapper {
     background-color: black;
     display: flex;
-    flex-wrap: wrap;
+    margin: auto;
     justify-content: center;
     align-items: center;
     width: 90%;
-    height: 90%;
+    height: 80%;
     padding: 10px;
     border-radius: 10px;
     box-shadow: -1px 14px 5px 0px rgba(0, 0, 0, 0.75);

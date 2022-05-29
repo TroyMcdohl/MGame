@@ -128,3 +128,14 @@
     transform: scale(1.1);
   }
 }
+
+@media (max-width: 760px) {
+  .game_card {
+    width: 150px;
+    height: 30vh;
+  }
+
+  .game_card:hover .game_logoes {
+    width: 50%;
+  }
+}

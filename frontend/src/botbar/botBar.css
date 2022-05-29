@@ -101,6 +101,10 @@
 }
 
 @media (max-width: 760px) {
+  .botbar_container {
+    height: 100vh;
+  }
+
   .botbar_wrapper {
     flex-wrap: wrap;
   }

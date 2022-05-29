@@ -127,7 +127,7 @@
 @media (max-width: 760px) {
   .dashbot_display {
     flex-wrap: wrap;
-    height: 80vh;
+    height: 75vh;
   }
   .dashbot_display {
     margin: 20px auto;
@@ -136,7 +136,7 @@
   .dashbot_photo {
     width: 70%;
     margin: 0px;
-    height: 50%;
+    height: 30vh;
   }
 
   .dashbot_img {
@@ -144,7 +144,7 @@
   }
 
   .dashbot_smphoto {
-    margin: 8px;
+    margin: 3px;
   }
 
   .dashbot_title {

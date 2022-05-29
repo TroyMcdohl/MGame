@@ -3,22 +3,27 @@ import "./dashCenter.css";
 const dashCenter = () => {
   return (
     <div className="dashcenter_container">
+      <h4 className="center_titel">Facts of some games</h4>
       <div className="dashcenter_wrapper">
         <div className="dashcenter_left">
-          <div className="dashcenter_left_photo">
-            <img
-              src="https://th.bing.com/th/id/OIP.BY8eZdD1egtBrl3y_HkzEgHaLH?w=186&h=279&c=7&r=0&o=5&dpr=1.25&pid=1.7"
-              alt=""
-              className="dashcenter_left_img"
-            />
-          </div>
-          <div className="dashcenter_left_detail">
-            <h4 className="left_title">Watch Dog</h4>
-            <div className="left_para">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Necessitatibus voluptatum commodi amet natus ratione. Quas nostrum
-              quos temporibus. Optio tenetur tempora aliquam quisquam doloremque
-              aliquid repudiandae voluptate mollitia neque excepturi?
+          <div className="left_card">
+            <div className="dashcenter_left_photo">
+              <img
+                src="https://th.bing.com/th/id/OIP.BY8eZdD1egtBrl3y_HkzEgHaLH?w=186&h=279&c=7&r=0&o=5&dpr=1.25&pid=1.7"
+                alt=""
+                className="dashcenter_left_img"
+              />
+            </div>
+
+            <div className="dashcenter_left_detail">
+              <h4 className="left_title">Watch Dog</h4>
+              <div className="left_para">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Necessitatibus voluptatum commodi amet natus ratione. Quas
+                nostrum quos temporibus. Optio tenetur tempora aliquam quisquam
+                doloremque aliquid repudiandae voluptate mollitia neque
+                excepturi?
+              </div>
             </div>
           </div>
         </div>

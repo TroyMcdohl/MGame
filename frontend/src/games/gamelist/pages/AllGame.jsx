@@ -22,6 +22,8 @@ const AllGame = () => {
           setErrMsg(resData.message);
         }
 
+        console.log(resData);
+
         setData(resData.data);
 
         setLoading(false);

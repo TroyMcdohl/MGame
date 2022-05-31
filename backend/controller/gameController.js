@@ -7,6 +7,10 @@ exports.getAllGames = async (req, res, next) => {
   try {
     const games = await Game.find().populate("library");
 
+    if (!games || games.length === 0) {
+      return next(new AppError("No games found", 404));
+    }
+
     res.status(200).json({
       status: "success",
       data: games,

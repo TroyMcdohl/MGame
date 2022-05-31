@@ -29,7 +29,7 @@ exports.findAllLibrary = async (req, res, next) => {
     const libraries = await Library.find({ user: req.user._id });
 
     if (!libraries || libraries.length === 0) {
-      return next(new AppError("Carts not found", 404));
+      return next(new AppError("No Games found", 404));
     }
 
     res.status(200).json(libraries);
@@ -42,7 +42,7 @@ exports.findLibrary = async (req, res, next) => {
   try {
     const library = await Library.findById(req.params.libraryId);
     if (!library) {
-      return next(new AppError("Carts not found", 404));
+      return next(new AppError("No Games found", 404));
     }
 
     res.status(200).json(library);
@@ -73,10 +73,10 @@ exports.deleteLibrary = async (req, res, next) => {
     const delLibrary = await Library.findByIdAndDelete(req.params.libraryId);
 
     if (!delLibrary) {
-      return next(new AppError("That id with cart not found", 404));
+      return next(new AppError("That id with game not found", 404));
     }
 
-    res.status(204).json();
+    res.status(204).json(delLibrary);
   } catch (error) {
     next(error);
   }

@@ -67,7 +67,7 @@ const NavSketch = () => {
                 to={"/user"}
               >
                 <img
-                  src="https://th.bing.com/th/id/OIP.zEK1mr_rnlkN81tI1bdWUAAAAA?w=180&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"
+                  src={`http://localhost:8000/${currentUser.user.photo}`}
                   alt=""
                   className="nav_user_photo"
                 />

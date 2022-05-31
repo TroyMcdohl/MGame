@@ -38,19 +38,23 @@
 @media (max-width: 760px) {
   .userInfo_container {
     width: 100%;
+    height: calc(100vh - 60px);
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
   .userInfo_wrapper {
-    margin-top: 30px;
-    width: 90%;
-    height: 90%;
-    border-radius: 10px;
+    display: flex;
+
     background-color: black;
-    box-shadow: -1px 14px 5px 0px rgba(0, 0, 0, 0.75);
-    -webkit-box-shadow: -1px 14px 5px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: -1px 14px 5px 0px rgba(0, 0, 0, 0.75);
+    width: 90%;
+    height: 80%;
+  }
+
+  .info_btn {
+    margin: 20px;
+    border: none;
+    color: white;
   }
 }

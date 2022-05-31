@@ -19,6 +19,9 @@ import UserPassword from "./user/components/UserPassword";
 import CreateGame from "./user/components/CreateGame";
 
 import UserContext from "./context/UserContext";
+import FreeGame from "./games/filtergame/freegame/pages/FreeGame";
+import DiscountGame from "./games/filtergame/discountgame/pages/DiscountGame";
+import StoryGame from "./games/filtergame/storygame/pages/StoryGame";
 
 const App = () => {
   const currentUser = useContext(UserContext).currentUser();
@@ -31,6 +34,9 @@ const App = () => {
           <>
             <Route path="/" element={<DashBoard />} />
             <Route path="/games" element={<AllGame />}></Route>
+            <Route path="/freegames" element={<FreeGame />}></Route>
+            <Route path="/storygames" element={<StoryGame />}></Route>
+            <Route path="/discountgames" element={<DiscountGame />}></Route>
             <Route path="/games/:gameId" element={<Game />} />
             <Route path="/library" element={<GameLibrary />}></Route>
             <Route path="/user" element={<User />}></Route>

@@ -1,108 +1,80 @@
 .game_container {
   background-color: gray;
   width: 100%;
-  height: calc(100vh - 60px);
+  height: 100%;
+  display: flex;
 }
 
 .game_wrapper {
-  width: 90%;
-
-  margin: auto;
+  width: 100%;
+  height: 100%;
+  margin: 5px;
   display: flex;
   flex-wrap: wrap;
-  background-color: darkgray;
   justify-content: center;
   align-items: center;
-}
-
-.game_filter {
-  height: 5vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.game_fil {
-  padding: 5px;
-  background-color: grey;
-
-  color: white;
-  font-size: 18px;
-}
-
-.game_fil_title {
-  margin: 10px;
-  color: white;
-}
-
-.game_fil:focus {
-  outline: none;
 }
 
 .game_card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: black;
-  width: 280px;
-  height: 60vh;
+  background-color: white;
+  width: 20%;
+  height: 50vh;
   margin: 10px;
   position: relative;
 }
 
-.game_logoes {
-  display: none;
-}
-
-.game_card:hover .game_logoes {
-  width: 75%;
-  position: absolute;
-  color: white;
-  display: flex;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  justify-content: center;
-  align-items: center;
-}
-
-.game_logo {
-  list-style-type: none;
-  padding: 10px;
-  background-color: white;
-  opacity: 0.5;
-  color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 10px;
-  border-radius: 50%;
-  transition: 1s ease;
-  cursor: pointer;
-}
-
-.game_logo:hover {
-  transform: scale(1.2);
-}
-
 .game_photo {
-  background-color: white;
-  height: 50vh;
+  background-color: black;
+  height: 90%;
 }
 
 .game_img {
   width: 100%;
-  height: 98%;
-  border-radius: 10px;
+  height: 100%;
+  object-fit: cover;
 }
 
-.game_title {
-  color: white;
+.game_logoes {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  top: 0;
+  margin: 0;
+  padding: 0px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.game_card:hover .game_logoes {
+  display: flex;
+}
+
+.game_logo {
+  list-style: none;
+  background-color: white;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: 200px;
+  transition: all 0.5s ease;
+}
+
+.game_logo:hover {
+  transform: scale(1.1);
+}
+
+.game_title {
+  margin: 5px;
+
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .loading_in {
@@ -130,12 +102,12 @@
 }
 
 @media (max-width: 760px) {
-  .game_card {
-    width: 150px;
-    height: 30vh;
+  .game_wrapper {
+    flex-wrap: nowrap;
+    flex-direction: column;
   }
 
-  .game_card:hover .game_logoes {
-    width: 50%;
+  .game_card {
+    width: 100%;
   }
 }

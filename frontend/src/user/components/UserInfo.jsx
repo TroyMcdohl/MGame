@@ -1,20 +1,49 @@
-import { useContext } from "react";
+import { useContext, useRef, useState } from "react";
 import UserContext from "../../context/UserContext";
 import "./userInfo.css";
 
 const UserInfo = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [imageFile, setImageFile] = useState("");
+
+  const imageRef = useRef();
+
   const currentUser = useContext(UserContext).currentUser().user;
 
-  console.log(currentUser);
+  const formData = new FormData();
+  formData.append("name", name);
+  formData.append("email", email);
+  formData.append("photo", imageFile);
+
+  const infoChangeHandler = async () => {
+    const res = await fetch("http://localhost:8000/api/v1/users/updateme", {
+      method: "PATCH",
+      credentials: "include",
+      body: formData,
+    });
+
+    console.log(await res.json());
+  };
 
   return (
     <div className="userInfo_container">
       <div className="userInfo_wrapper">
         <div className="userInfo_photo">
           <img
-            src="https://th.bing.com/th/id/OIP.zEK1mr_rnlkN81tI1bdWUAAAAA?w=180&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"
+            src={`http://localhost:8000/${currentUser.photo}`}
             alt=""
+            onClick={() => {
+              imageRef.current.click();
+            }}
             className="userInfo_img"
+            style={{ cursor: "pointer" }}
+          />
+          <input
+            type="file"
+            ref={imageRef}
+            style={{ display: "none" }}
+            onChange={(e) => setImageFile(e.target.files[0])}
           />
         </div>
         <div className="info_input">
@@ -23,6 +52,7 @@ const UserInfo = () => {
             type="text"
             className="info_input"
             placeholder={currentUser.name}
+            onChange={(e) => setName(e.target.value)}
           />
         </div>
         <div className="info_input">
@@ -31,6 +61,7 @@ const UserInfo = () => {
             type="text"
             placeholder={currentUser.email}
             className="info_input"
+            onChange={(e) => setEmail(e.target.value)}
           />
         </div>
         <div className="info_input">
@@ -42,7 +73,9 @@ const UserInfo = () => {
             disabled
           />
         </div>
-        <button className="info_btn">Change</button>
+        <button className="info_btn" onClick={infoChangeHandler}>
+          Change
+        </button>
       </div>
     </div>
   );

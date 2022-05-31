@@ -139,7 +139,7 @@ exports.updateMe = async (req, res, next) => {
     const filter = objectFilter(req.body, "name", "email");
 
     if (req.file) {
-      filter.photo = "public/img/users" + req.file.filename;
+      filter.photo = "public/img/users/" + req.file.filename;
     }
 
     const user = await User.findByIdAndUpdate(req.user._id, filter, {

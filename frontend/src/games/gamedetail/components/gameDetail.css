@@ -1,33 +1,26 @@
 .gamedetail_container {
   height: calc(100vh - 60px);
-  width: 100%;
+
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
 }
 
 .gamedetail_wrapper {
-  width: 99%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(
-    90deg,
-    rgb(8, 11, 32) 0%,
-    rgb(67, 29, 175) 57%,
-    rgb(25, 19, 70) 81%
-  );
+  background-color: rgb(38, 75, 175);
+  width: 95%;
+  height: 95%;
 }
 
 .gamedetail_left {
-  width: 80%;
-  height: 80vh;
+  flex: 6;
 }
 
 .detailleft_photo {
-  width: 90%;
-  height: 75%;
-  margin: 5px auto;
+  height: 65%;
+  margin: 10px;
 }
 
 .detailleft_img {
@@ -37,118 +30,107 @@
 }
 
 .detailleft_smphoto {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 10vh;
-  margin: 30px;
-  cursor: pointer;
+  height: 30%;
+  margin: 10px;
 }
 
 .detailleft_smimg {
-  width: 100%;
+  width: 24%;
+  margin-left: 5px;
   height: 100%;
-  margin: 2px;
-  object-fit: cover;
 }
 
 .detailleft_smimg:hover {
-  border: 2px solid white;
+  border: 1px solid white;
 }
 
 .gamedetail_right {
-  width: 50%;
-  margin: 15px;
-  height: 80vh;
-  border-radius: 10px;
+  flex: 6;
 }
 
 .detailright_photo {
-  background-color: black;
-  width: 100%;
-  height: 40vh;
+  height: 50%;
+  margin: 5px;
 }
 
 .detailright_img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 5px;
+}
+
+.detailright_description {
+  height: 50%;
 }
 
 .detailright_para {
-  color: white;
-
-  width: 95%;
-  margin: 10px auto;
-  font-weight: 200px;
-  font-size: 15px;
+  width: 90%;
+  margin: auto;
+  padding: 5px;
+  overflow: scroll;
+  overflow-x: hidden;
+  text-indent: 20px;
+  height: 40%;
 }
 
 .detail_des {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  height: 50%;
 }
 
 .detail_types {
+  flex: 6;
+
+  height: 100%;
+  margin: 5px;
   display: flex;
-  flex-direction: column;
-  margin-top: 15px;
+
+  justify-content: center;
+  align-items: center;
 }
 
 .detail_type {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  height: 30px;
-
-  padding: 5px;
+  flex-direction: column;
+  margin: 10px;
 }
 
 .detail_label {
-  margin-right: 10px;
-  font-size: 15px;
-  width: 50%;
+  margin: 0;
 }
 
 .detail_fact {
-  margin-left: 10px;
-  width: 50%;
+  font-weight: 300px;
 }
 
 .detail_final {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+  flex: 6;
 
-.detail_feels {
+  margin: 8px;
+  width: 100%;
+  height: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .detail_feel {
+  font-size: 18px;
+  margin: 10px;
+  font-weight: 300px;
   background-color: black;
   color: white;
-  margin: 5px;
-  padding: 5px;
+  padding: 10px;
   border-radius: 5px;
-  font-size: 15px;
-}
-
-.detail_cart {
-  margin-top: 15px;
 }
 
 .detailcart_btn {
+  margin: 5px;
+  border: none;
   background-color: green;
   color: white;
-  border: none;
-  padding: 8px;
+  padding: 10px;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -156,64 +138,26 @@
 @media (max-width: 760px) {
   .gamedetail_container {
     height: 100%;
+    background-color: black;
   }
 
   .gamedetail_wrapper {
-    flex-wrap: wrap;
-    height: 100%;
-  }
-
-  .gamedetail_left {
-    height: 30vh;
-    margin: 10px;
+    flex-direction: column;
   }
 
   .detailleft_photo {
-    width: 80%;
+    height: 40vh;
   }
 
-  .detailleft_smphoto {
-    height: 8vh;
-    margin: 10px auto;
-    width: 85px;
-  }
-
-  .gamedetail_right {
-    width: 100%;
-    margin: 35px;
+  .detailleft_smimg {
+    width: 23%;
   }
 
   .detailright_photo {
-    height: 25vh;
+    height: 40vh;
   }
 
-  .detailright_para {
-    font-size: 10px;
-    margin: 3px;
-  }
-
-  .detail_type {
-    height: 20px;
-    margin: 2px;
-
-    font-size: 10px;
-  }
-
-  .detail_label {
-    font-size: 10px;
-    width: 60%;
-  }
-
-  .detail_fact {
-    margin-left: 5px;
-    width: 40%;
-  }
-
-  .detail_feel {
-    font-size: 10px;
-  }
-
-  .detailcart_btn {
-    font-size: 10px;
+  .detailright_description {
+    font-size: 15px;
   }
 }

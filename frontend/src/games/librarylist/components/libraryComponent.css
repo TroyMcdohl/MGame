@@ -81,3 +81,63 @@
   border-radius: 10px;
   cursor: pointer;
 }
+
+@media (max-width: 760px) {
+  .library_card {
+    display: flex;
+    height: 50vh;
+    flex-direction: column;
+  }
+
+  .library_left {
+    flex: 12;
+
+    position: relative;
+  }
+
+  .library_photo {
+    width: 90%;
+    height: 90%;
+    position: absolute;
+  }
+
+  .library_right {
+    flex: 12;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .library_types {
+    width: 60%;
+  }
+
+  .library_type {
+    list-style: none;
+
+    margin: 0px 35px 0px 0px;
+    font-size: 10px;
+  }
+
+  .library_type_title {
+    font-size: 18px;
+  }
+
+  .library_remove_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .re_btn {
+    border: none;
+    background-color: rgb(248, 85, 85);
+    color: white;
+    padding: 10px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+}

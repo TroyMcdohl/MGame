@@ -3,7 +3,16 @@ import "./dashCenter.css";
 const dashCenter = () => {
   return (
     <div className="dashcenter_container">
-      <h4 className="center_titel">Facts of some games</h4>
+      <h4
+        className="center_titel"
+        style={{
+          backgroundColor: "black",
+          padding: "10px",
+          borderRadius: "5px",
+        }}
+      >
+        Facts of some games
+      </h4>
       <div className="dashcenter_wrapper">
         <div className="dashcenter_left">
           <div className="left_card">

@@ -1,5 +1,5 @@
 import "./dashBot.css";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const DashBot = () => {
   const navigate = useNavigate();
@@ -43,34 +43,30 @@ const DashBot = () => {
             </div>
             <div className="dashbot_detail">
               <h3 className="dashbot_title">Devil May Cry V</h3>
-              <div className="dashbot_para">
-                <div className="dashbot_fact">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Magni repellendus odit suscipit. Eius illo, quam ullam optio
-                  necessitatibus unde hic dicta laboriosam omnis laudantium
-                  tempore vitae voluptate maxime? Quis, omnis!
-                </div>
-                <ul className="dashbot_types">
-                  <li
-                    className="dashbot_type"
-                    style={{ backgroundColor: "red" }}
-                  >
-                    Adventurer
-                  </li>
-                  <li
-                    className="dashbot_type"
-                    style={{ backgroundColor: "orange" }}
-                  >
-                    Action
-                  </li>
-                  <li
-                    className="dashbot_type"
-                    style={{ backgroundColor: "green" }}
-                  >
-                    Story
-                  </li>
-                </ul>
+
+              <div className="dashbot_fact">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni
+                repellendus odit suscipit. Eius illo, quam ullam optio
+                necessitatibus unde hic dicta laboriosam omnis laudantium
+                tempore vitae voluptate maxime? Quis, omnis!
               </div>
+              <ul className="dashbot_types">
+                <li className="dashbot_type" style={{ backgroundColor: "red" }}>
+                  Adventurer
+                </li>
+                <li
+                  className="dashbot_type"
+                  style={{ backgroundColor: "orange" }}
+                >
+                  Action
+                </li>
+                <li
+                  className="dashbot_type"
+                  style={{ backgroundColor: "green" }}
+                >
+                  Story
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -87,13 +83,35 @@ const DashBot = () => {
             </button>
           </div>
           <div className="dashbot_other">
-            <button className="dashbot_btn">Free Game</button>
+            <button className="dashbot_btn">
+              <Link
+                to="/freegames"
+                style={{ color: "white", textDecoration: "none" }}
+              >
+                Free Game
+              </Link>
+            </button>
           </div>
           <div className="dashbot_other">
-            <button className="dashbot_btn">Story Game</button>
+            <button className="dashbot_btn">
+              <Link
+                to="/storygames"
+                style={{ color: "white", textDecoration: "none" }}
+              >
+                Story Game
+              </Link>
+            </button>
           </div>
           <div className="dashbot_other">
-            <button className="dashbot_btn">Discount Game</button>
+            <button className="dashbot_btn">
+              {" "}
+              <Link
+                to="/discountgames"
+                style={{ color: "white", textDecoration: "none" }}
+              >
+                Discount Game
+              </Link>
+            </button>
           </div>
         </div>
       </div>

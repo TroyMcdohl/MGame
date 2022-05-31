@@ -1,5 +1,5 @@
 .dashbot_container {
-  height: 100vh;
+  height: calc(100vh - 60px);
   width: 100%;
 }
 
@@ -16,11 +16,12 @@
   width: 90%;
   justify-content: center;
   align-items: center;
-  margin: 25px auto;
+  margin: 10px;
   background-color: black;
 }
 
 .dashbot_photo {
+  flex: 4;
   width: 60%;
   margin: 20px;
   height: 90%;
@@ -29,11 +30,12 @@
 .dashbot_img {
   width: 100%;
   height: 100%;
-
+  object-fit: cover;
   border-radius: 5px;
 }
 
 .dashbot_photodetail {
+  flex: 8;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,12 +43,16 @@
 
 .dashbot_photos {
   display: flex;
+  height: 30vh;
+  width: 90%;
+
   justify-content: center;
   align-items: center;
 }
 
 .dashbot_smphoto {
-  background-color: white;
+  width: 33.3%;
+  height: 90%;
 
   margin: 5px;
 }
@@ -60,28 +66,25 @@
 
 .dashbot_detail {
   color: white;
+
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 35vh;
 }
 
 .dashbot_title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.dashbot_para {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .dashbot_fact {
-  width: 60%;
   padding: 5px;
-  line-height: 20px;
+  line-height: 22px;
+  text-indent: 20px;
 }
 
 .dashbot_types {
-  width: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -102,7 +105,7 @@
   width: 90%;
   justify-content: center;
   align-items: center;
-  margin: auto;
+
   border-radius: 5px;
 }
 
@@ -117,7 +120,7 @@
   border-bottom: 2px solid blue;
   font-size: 18px;
   cursor: pointer;
-  transition: 1s ease;
+  transition: 0.5s ease;
 }
 
 .dashbot_btn:hover {
@@ -125,54 +128,50 @@
 }
 
 @media (max-width: 760px) {
-  .dashbot_display {
-    flex-wrap: wrap;
-    height: 75vh;
+  .dashbot_container {
+    height: 100%;
   }
+
   .dashbot_display {
-    margin: 20px auto;
+    flex-direction: column;
   }
 
   .dashbot_photo {
-    width: 70%;
-    margin: 0px;
-    height: 30vh;
+    flex: 12;
+    width: 90%;
+    height: 50%;
+    margin: 5px;
   }
 
   .dashbot_img {
-    object-fit: cover;
+    width: 100%;
+    height: 100%;
   }
 
-  .dashbot_smphoto {
-    margin: 3px;
+  .dashbot_photodetail {
+    flex: 12;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .dashbot_title {
-    font-size: 15px;
-  }
+  .dashbot_photos {
+    height: 10vh;
 
-  .dashbot_fact {
-    margin: 8px;
-  }
-
-  .dashbot_para {
-    font-size: 10px;
+    margin: 5px;
   }
 
   .dashbot_types {
-    flex-wrap: wrap;
+    width: 100%;
+    display: flex;
   }
 
   .dashbot_type {
-    margin: 5px;
-    font-size: 10px;
-    list-style-type: none;
-    padding: 5px;
-    border-radius: 5px;
+    margin: 0px 50px 0px 0px;
   }
 
   .dashbot_others {
-    height: 10vh;
+    margin: 10px;
   }
 
   .dashbot_other {
@@ -180,6 +179,14 @@
   }
 
   .dashbot_btn {
+    border: none;
+    padding: 5px;
+    margin: 5px;
     font-size: 10px;
+  }
+
+  .dashbot_btn:hover {
+    transform: scale(1.2);
+    border-bottom: 2px solid blue;
   }
 }

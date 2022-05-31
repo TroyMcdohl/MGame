@@ -63,31 +63,62 @@ const GameDetail = (props) => {
               <div className="detailleft_photo">
                 {img && <img src={img} alt="" className="detailleft_img" />}
                 {!img && (
-                  <img
-                    src={`http://localhost:8000/${props.game.image}`}
-                    alt=""
-                    className="detailleft_img"
-                  />
+                  <>
+                    <img
+                      src={`${props.game.image}`}
+                      alt=""
+                      className="detailleft_img"
+                    />
+                  </>
                 )}
               </div>
               <div className="detailleft_smphoto">
-                {props.game.images.map((img) => (
-                  <img
-                    src={`http://localhost:8000/${img}`}
-                    alt=""
-                    className="detailleft_smimg"
-                    onClick={randomImgHandler}
-                  />
-                ))}
+                {/* {props.game.images.map((img) => ( */}
+                <img
+                  // src={`http://localhost:8000/${img}`}
+                  src={`${props.game.image}`}
+                  alt=""
+                  className="detailleft_smimg"
+                  onClick={randomImgHandler}
+                />
+
+                <img
+                  // src={`http://localhost:8000/${img}`}
+                  src={`${props.game.image}`}
+                  alt=""
+                  className="detailleft_smimg"
+                  onClick={randomImgHandler}
+                />
+
+                <img
+                  // src={`http://localhost:8000/${img}`}
+                  src={`${props.game.image}`}
+                  alt=""
+                  className="detailleft_smimg"
+                  onClick={randomImgHandler}
+                />
+
+                <img
+                  // src={`http://localhost:8000/${img}`}
+                  src={`${props.game.image}`}
+                  alt=""
+                  className="detailleft_smimg"
+                  onClick={randomImgHandler}
+                />
+                {/* ))} */}
               </div>
             </div>
             <div className="gamedetail_right">
               <div className="detailright_photo">
                 <img
-                  src={`http://localhost:8000/${props.game.image}`}
+                  // src={`http://localhost:8000/${props.game.image}`}
+
+                  src={`${props.game.image}`}
                   alt=""
                   className="detailright_img"
                 />
+              </div>
+              <div className="detailright_description">
                 <p className="detailright_para">{props.game.des}</p>
                 <div className="detail_des">
                   <div className="detail_types">
@@ -105,17 +136,10 @@ const GameDetail = (props) => {
                     </div>
                   </div>
                   <div className="detail_final">
-                    <div className="detail_feels">
-                      <div className="detail_feel">{props.game.type}</div>
-                    </div>
-                    <div className="detail_cart">
-                      <button
-                        className="detailcart_btn"
-                        onClick={libraryHandler}
-                      >
-                        Add to Library
-                      </button>
-                    </div>
+                    <div className="detail_feel">{props.game.type}</div>
+                    <button className="detailcart_btn" onClick={libraryHandler}>
+                      Add to Library
+                    </button>
                   </div>
                 </div>
               </div>

@@ -1,16 +1,22 @@
 import "./libraryComponent.css";
+import { useNavigate } from "react-router-dom";
 
 const LibraryComponent = (props) => {
+  const navigate = useNavigate();
+
   return (
     <div className="library_container">
       <div className="library_wrapper">
         {props.game &&
+          props.game.length > 0 &&
           props.game.map((g) => (
             <div className="library_card">
               <div className="library_left">
                 <div className="library_photo">
                   <img
-                    src={`http://localhost:8000/${g.game.image}`}
+                    // src={
+                    //   `http://localhost:8000/${g.game.image}` ||
+                    src={`${g.game.image}`}
                     alt=""
                     className="library_img"
                   />
@@ -36,7 +42,28 @@ const LibraryComponent = (props) => {
                   </li>
                 </ul>
                 <div className="library_remove_btn">
-                  <button className="re_btn">Remove from Library</button>
+                  <button
+                    className="re_btn"
+                    onClick={async () => {
+                      const res = await fetch(
+                        `http://localhost:8000/api/v1/library/${g._id}`,
+                        {
+                          method: "DELETE",
+                          credentials: "include",
+                          headers: {
+                            "Content-Type": "application/json",
+                          },
+                        }
+                      );
+
+                      if (!res.ok) {
+                        navigate(0);
+                      }
+                      console.log(await res.json());
+                    }}
+                  >
+                    Remove from Library
+                  </button>
                 </div>
               </div>
             </div>

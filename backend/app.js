@@ -24,7 +24,7 @@ mongoose
 
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: "https://game-troy-frontend.herokuapp.com",
     credentials: true,
   })
 );
@@ -51,6 +51,6 @@ app.use("*", (req, res, next) => {
 
 app.use(globalErrorHandler);
 
-app.listen(process.env.PORT, () => {
+app.listen(process.env.PORT || 8000, () => {
   console.log("Server is running!");
 });

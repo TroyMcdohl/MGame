@@ -1,6 +1,6 @@
 const Game = require("../models/Game");
 const multer = require("multer");
-const AppError = require("../../../mern-shop/m-shop_backend/error/AppError");
+const AppError = require("../error/AppError");
 const sharp = require("sharp");
 
 exports.getAllGames = async (req, res, next) => {

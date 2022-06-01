@@ -11,9 +11,12 @@ const GameLibrary = () => {
     const fetchData = async () => {
       setErrMsg(false);
       setLoading(true);
-      const res = await fetch(`http://localhost:8000/api/v1/library`, {
-        credentials: "include",
-      });
+      const res = await fetch(
+        `https://game-troy.herokuapp.com/api/v1/library`,
+        {
+          credentials: "include",
+        }
+      );
 
       const resData = await res.json();
 

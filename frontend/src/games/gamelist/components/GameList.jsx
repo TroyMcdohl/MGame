@@ -12,7 +12,7 @@ const GameList = (props) => {
             <div className="game_card" key={game._id}>
               <div className="game_photo">
                 <img
-                  // src={`http://localhost:8000/${game.image}`}
+                  // src={`https://game-troy.herokuapp.com/api/v1/${game.image}`}
                   src={`${game.image}`}
                   alt=""
                   className="game_img"

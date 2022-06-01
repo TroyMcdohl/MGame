@@ -14,7 +14,7 @@ const GameDetail = (props) => {
   const libraryHandler = async () => {
     setError(false);
     const res = await fetch(
-      `http://localhost:8000/api/v1/games/${props.game._id}/library/`,
+      `https://game-troy.herokuapp.com/api/v1/games/${props.game._id}/library/`,
       {
         credentials: "include",
         method: "POST",
@@ -27,8 +27,6 @@ const GameDetail = (props) => {
       setErrorMsg(resData.message);
       setError(true);
     }
-
-    console.log(resData);
   };
 
   return (
@@ -75,7 +73,7 @@ const GameDetail = (props) => {
               <div className="detailleft_smphoto">
                 {/* {props.game.images.map((img) => ( */}
                 <img
-                  // src={`http://localhost:8000/${img}`}
+                  // src={`https://game-troy.herokuapp.com/api/v1/${img}`}
                   src={`${props.game.image}`}
                   alt=""
                   className="detailleft_smimg"
@@ -83,7 +81,7 @@ const GameDetail = (props) => {
                 />
 
                 <img
-                  // src={`http://localhost:8000/${img}`}
+                  // src={`https://game-troy.herokuapp.com/api/v1/${img}`}
                   src={`${props.game.image}`}
                   alt=""
                   className="detailleft_smimg"
@@ -91,7 +89,7 @@ const GameDetail = (props) => {
                 />
 
                 <img
-                  // src={`http://localhost:8000/${img}`}
+                  // src={`https://game-troy.herokuapp.com/api/v1/${img}`}
                   src={`${props.game.image}`}
                   alt=""
                   className="detailleft_smimg"
@@ -99,7 +97,7 @@ const GameDetail = (props) => {
                 />
 
                 <img
-                  // src={`http://localhost:8000/${img}`}
+                  // src={`https://game-troy.herokuapp.com/api/v1/${img}`}
                   src={`${props.game.image}`}
                   alt=""
                   className="detailleft_smimg"
@@ -111,7 +109,7 @@ const GameDetail = (props) => {
             <div className="gamedetail_right">
               <div className="detailright_photo">
                 <img
-                  // src={`http://localhost:8000/${props.game.image}`}
+                  // src={`https://game-troy.herokuapp.com/api/v1/${props.game.image}`}
 
                   src={`${props.game.image}`}
                   alt=""

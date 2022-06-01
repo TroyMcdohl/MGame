@@ -38,17 +38,20 @@ const Login = () => {
     try {
       setIsLoading(true);
       setError(false);
-      const res = await fetch("http://localhost:8000/api/v1/users/login", {
-        method: "POST",
-        credentials: "include",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email: enteredEmail,
-          password: enteredPassword,
-        }),
-      });
+      const res = await fetch(
+        "https://game-troy.herokuapp.com/api/v1/users/login",
+        {
+          method: "POST",
+          credentials: "include",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email: enteredEmail,
+            password: enteredPassword,
+          }),
+        }
+      );
 
       const resData = await res.json();
 

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import GameList from "../components/GameList";
+import FreeGamePage from "../components/FreeGamePage";
 
-const AllGame = () => {
+const FreeGame = () => {
   const [data, setData] = useState();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
@@ -24,8 +24,6 @@ const AllGame = () => {
           setError(true);
           setErrMsg(resData.message);
         }
-
-        console.log(resData);
 
         setData(resData.data);
 
@@ -50,9 +48,9 @@ const AllGame = () => {
           <h4>Loading.....</h4>
         </div>
       )}
-      <GameList games={data} />
+      <FreeGamePage games={data} />
     </>
   );
 };
 
-export default AllGame;
+export default FreeGame;

@@ -67,7 +67,7 @@ const NavSketch = () => {
                 to={"/user"}
               >
                 <img
-                  src={`http://localhost:8000/${currentUser.user.photo}`}
+                  src={`https://game-troy.herokuapp.com/api/v1/${currentUser.user.photo}`}
                   alt=""
                   className="nav_user_photo"
                 />

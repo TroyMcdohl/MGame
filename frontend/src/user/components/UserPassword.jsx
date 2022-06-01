@@ -1,14 +1,17 @@
 import { useState } from "react";
 import "./userPassword.css";
+import { useNavigate } from "react-router-dom";
 
 const UserPassword = () => {
   const [oPwd, setOPwd] = useState();
   const [nPwd, setNPwd] = useState();
   const [cPwd, setCPwd] = useState();
 
+  const navigate = useNavigate();
+
   const passwordChangeHandler = async () => {
     const res = await fetch(
-      "http://localhost:8000/api/v1/users/updatepassword",
+      "https://game-troy.herokuapp.com/api/v1/users/updatepassword",
       {
         method: "PATCH",
         headers: {
@@ -23,7 +26,9 @@ const UserPassword = () => {
       }
     );
 
-    console.log(await res.json());
+    if (res.ok) {
+      navigate("/");
+    }
   };
 
   return (

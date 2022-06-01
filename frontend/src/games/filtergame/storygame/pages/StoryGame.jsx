@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import GameList from "../components/GameList";
+import StoryGamePage from "../components/StoryGamePage";
 
-const AllGame = () => {
+const StoryGame = () => {
   const [data, setData] = useState();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
@@ -50,9 +50,9 @@ const AllGame = () => {
           <h4>Loading.....</h4>
         </div>
       )}
-      <GameList games={data} />
+      <StoryGamePage games={data} />
     </>
   );
 };
 
-export default AllGame;
+export default StoryGame;

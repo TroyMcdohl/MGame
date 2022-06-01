@@ -57,7 +57,7 @@ const UserPanel = () => {
   };
 
   const logoutHandler = async () => {
-    await fetch("http://localhost:8000/api/v1/users/logout", {
+    await fetch("https://game-troy.herokuapp.com/api/v1/users/logout", {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

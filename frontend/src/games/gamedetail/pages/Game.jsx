@@ -12,7 +12,9 @@ const Game = () => {
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
-      const res = await fetch(`http://localhost:8000/api/v1/games/${gameId}`);
+      const res = await fetch(
+        `https://game-troy.herokuapp.com/api/v1/games/${gameId}`
+      );
 
       const resData = await res.json();
 

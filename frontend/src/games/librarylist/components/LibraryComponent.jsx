@@ -15,7 +15,7 @@ const LibraryComponent = (props) => {
                 <div className="library_photo">
                   <img
                     // src={
-                    //   `http://localhost:8000/${g.game.image}` ||
+                    //   `https://game-troy.herokuapp.com/api/v1/${g.game.image}` ||
                     src={`${g.game.image}`}
                     alt=""
                     className="library_img"
@@ -46,7 +46,7 @@ const LibraryComponent = (props) => {
                     className="re_btn"
                     onClick={async () => {
                       const res = await fetch(
-                        `http://localhost:8000/api/v1/library/${g._id}`,
+                        `https://game-troy.herokuapp.com/api/v1/library/${g._id}`,
                         {
                           method: "DELETE",
                           credentials: "include",
@@ -59,7 +59,6 @@ const LibraryComponent = (props) => {
                       if (!res.ok) {
                         navigate(0);
                       }
-                      console.log(await res.json());
                     }}
                   >
                     Remove from Library

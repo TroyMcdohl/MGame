@@ -84,13 +84,11 @@ const CreateGame = () => {
       form.append("images", imgFile[i]);
     }
 
-    const res = await fetch(`http://localhost:8000/api/v1/games/`, {
+    const res = await fetch(`https://game-troy.herokuapp.com/api/v1/games/`, {
       method: "POST",
       credentials: "include",
       body: form,
     });
-
-    console.log(await res.json());
   };
 
   return (

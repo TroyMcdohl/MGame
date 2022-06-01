@@ -1,8 +1,11 @@
 import { useContext, useRef, useState } from "react";
 import UserContext from "../../context/UserContext";
 import "./userInfo.css";
+import { useNavigate } from "react-router-dom";
 
 const UserInfo = () => {
+  const navigate = useNavigate();
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [imageFile, setImageFile] = useState("");
@@ -17,11 +20,18 @@ const UserInfo = () => {
   formData.append("photo", imageFile);
 
   const infoChangeHandler = async () => {
-    const res = await fetch("http://localhost:8000/api/v1/users/updateme", {
-      method: "PATCH",
-      credentials: "include",
-      body: formData,
-    });
+    const res = await fetch(
+      "https://game-troy.herokuapp.com/api/v1/users/updateme",
+      {
+        method: "PATCH",
+        credentials: "include",
+        body: formData,
+      }
+    );
+
+    if (res.ok) {
+      navigate("/");
+    }
 
     console.log(await res.json());
   };
@@ -31,7 +41,7 @@ const UserInfo = () => {
       <div className="userInfo_wrapper">
         <div className="userInfo_photo">
           <img
-            src={`http://localhost:8000/${currentUser.photo}`}
+            src={`https://game-troy.herokuapp.com/api/v1/${currentUser.photo}`}
             alt=""
             onClick={() => {
               imageRef.current.click();
